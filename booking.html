@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Aditi Banquet Hall</title>
+</head>
+
+<body class="background-image">
+    <header>
+        <div class="logo">
+            <img src="25.png" alt="Aditi Banquet Hall Logo">
+        </div>
+        <h1>Aditi Banquet Hall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calender.html">Booking</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to the contact form section -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booking-container" id="bookingContainer">
+        <div class="step" id="step1">
+            <div class="circle circle1 completed">1</div>
+            <div class="line line1"></div>
+        </div>
+        <div class="step" id="step2">
+            <div class="circle circle2">2</div>
+            <div class="line line2"></div>
+        </div>
+        <div class="step" id="step3">
+            <div class="circle circle3">3</div>
+        </div>
+    </div>
+
+    <section class="booking-form-container" id="formContainer">
+        <form id="booking-form" onsubmit="return moveToStep2()">
+            <div class="credentials">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName">
+
+                <label for="contact">Contact:</label>
+                <input type="tel" id="contact" name="contact">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="menu-container" id="menuContainer">
+        <!-- Menu items -->
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">खुर्ची </span>
+                <span class="price">Rs. १०.००</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" class="quantity" value="0" min="0" />
+                <span class="total" id="total1">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('खुर्ची', 10.00, 'quantity1', 'total1')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">प्लेट</span>
+                <span class="price">Rs. 260.00</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" class="quantity" value="0" min="0" />
+                <span class="total" id="total2">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('प्लेट', 260.00, 'quantity2', 'total2')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">खुर्ची कवर </span>
+                <span class="price">Rs. 15.00</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity" value="0" min="0" />
+                <span class="total" id="total3">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('खुर्ची कवर', 15.00, 'quantity3', 'total3')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">वाटी  </span>
+                <span class="price">Rs. 3.००</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity" value="0" min="0" />
+                <span class="total" id="total4">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('वाटी', 3.00, 'quantity4', 'total4')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            
+            <div class="item-details">
+                <span class="item-name">टोपले  </span>
+                <span class="price">Rs. 100</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity5">Quantity:</label>
+                <input type="number" id="quantity5" class="quantity" value="0" min="0" />
+                <span class="total" id="total5">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('टोपले', 100.00, 'quantity5', 'total5')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">  चमचे  </span>
+                <span class="price">Rs.2 </span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity6">Quantity:</label>
+                <input type="number" id="quantity6" class="quantity" value="0" min="0" />
+                <span class="total" id="total6">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('चमचे', 2.00, 'quantity6', 'total6')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">जग  </span>
+                <span class="price">Rs. 30</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity7">Quantity:</label>
+                <input type="number" id="quantity7" class="quantity" value="0" min="0" />
+                <span class="total" id="total7">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('जग', 30.00, 'quantity7', 'total7')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">गॅस  </span>
+                <span class="price">Rs. 900</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity8">Quantity:</label>
+                <input type="number" id="quantity8" class="quantity" value="0" min="0" />
+                <span class="total" id="total8">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('गॅस', 900.00, 'quantity8', 'total8')">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Add more menu items as needed -->
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <!-- Display items added to the cart -->
+        <ul id="cartList"></ul>
+        <!-- Display total and checkout button -->
+        <div id="cart-total">
+            <p>Total: <span id="totalPrice">Rs. 0.00</span></p>
+            <button onclick="showSummary()">Show Summary</button>
+        </div>
+    </section>
+    <section class="summary-container" id="summaryContainer" style="display: none;">
+        <h2>Summary</h2>
+        <ul id="summaryList"></ul>
+        <p>Total: <span id="summaryTotalPrice">Rs. 0.00</span></p>
+        <button onclick="proceedToStep3()">Submit</button>
+    </section>
+    
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <div class="contact-info">
+        <div class="person-info">
+            
+            <p>Name: PANKAJ KULKARNI</p>
+            <p>Contact: 9604432376</p>
+        </div>
+        <div class="person-info">
+            <p>Name: SACHIN RATHOD</p>
+            <p>Contact: 9637542299</p>
+        </div>
+    </div>
+    
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/aditi_banquet_hall?igsh=em1ub3V3ZHZlenhu" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+</footer>
+    <script>
+        let cartItems = [];
+        let totalPrice = 0;
+
+        function moveToStep2() {
+            // Display content of step 2
+            document.getElementById('step2').style.display = 'flex';
+
+            // Remove 'completed' class from step 1
+            document.querySelector('.circle1').classList.remove('completed');
+
+            // Add 'completed' class to step 2
+            document.querySelector('.circle2').classList.add('completed');
+
+            // Hide the form
+            document.getElementById('formContainer').style.display = 'none';
+
+            // Show the menu and cart
+            document.getElementById('menuContainer').style.display = 'block';
+            document.getElementById('cart').style.display = 'block';
+
+            // Prevent form submission
+            return false;
+        }
+
+        function addToCart(itemName, itemPrice, quantityId, totalId) {
+            // Get item details from the input fields
+            const quantity = document.getElementById(quantityId).valueAsNumber;
+
+            // Check if the item already exists in the cart
+            const existingItem = cartItems.find(item => item.name === itemName);
+
+            if (existingItem) {
+                // Update quantity and total for the existing item
+                existingItem.quantity += quantity;
+                existingItem.total += itemPrice * quantity;
+            } else {
+                // Add the item to the cart
+                cartItems.push({
+                    name: itemName,
+                    quantity: quantity,
+                    total: itemPrice * quantity,
+                });
+            }
+
+            // Update the total price
+            totalPrice += itemPrice * quantity;
+
+            // Update the cart display
+            updateCartDisplay();
+
+            // Clear input fields
+            document.getElementById(quantityId).value = 0;
+            document.getElementById(totalId).textContent = 'Total: Rs. 0.00';
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cartList');
+            const totalDisplay = document.getElementById('totalPrice');
+
+            // Clear previous items
+            cartList.innerHTML = '';
+
+            // Populate the cart list
+            cartItems.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name}  x  ${item.quantity}  =  ${item.total.toFixed(2)}`;
+                cartList.appendChild(listItem);
+            });
+
+            // Update total price display
+            totalDisplay.textContent = `Rs. ${totalPrice.toFixed(2)}`;
+        }
+
+        function showSummary() {
+            // Hide the menu and cart
+            document.getElementById('menuContainer').style.display = 'none';
+            document.getElementById('cart').style.display = 'none';
+
+            // Show the summary container
+            document.getElementById('summaryContainer').style.display = 'block';
+
+            // Populate the summary container
+            const summaryList = document.getElementById('summaryList');
+            const summaryTotalDisplay = document.getElementById('summaryTotalPrice');
+
+            // Clear previous items
+            summaryList.innerHTML = '';
+
+            // Populate the summary list
+            cartItems.forEach(item => {
+                const summaryItem = document.createElement('li');
+                summaryItem.textContent = `${item.name}  x  ${item.quantity}  =  ${item.total.toFixed(2)}`;
+                summaryList.appendChild(summaryItem);
+            });
+
+            // Update total price display in the summary
+            summaryTotalDisplay.textContent = `Rs. ${totalPrice.toFixed(2)}`;
+        }
+        function proceedToStep3() {
+    // Hide the summary container
+    document.getElementById('summaryContainer').style.display = 'none';
+
+    // Show the date selection container
+    document.getElementById('dateSelectionContainer').style.display = 'block';
+}
+// Add this JavaScript to your existing script.js or create a new one
+
+document.getElementById('make-booking').addEventListener('click', function () {
+    // Your logic for handling the "Make Booking Enquiry" button click event goes here
+
+    // Display the date selection container when the button is clicked
+    document.getElementById('dateSelectionContainer').style.display = 'block';
+});
+
+// Sample logic to populate the calendar content (replace with your actual logic)
+document.addEventListener('DOMContentLoaded', function () {
+    const calenderContent = document.getElementById('calender-content');
+
+    // Replace this with your actual logic to populate calendar content
+    for (let i = 1; i <= 31; i++) {
+        const dayElement = document.createElement('div');
+        dayElement.classList.add('day');
+        dayElement.textContent = i;
+        
+        // Add your logic to handle click on each day
+        dayElement.addEventListener('click', function () {
+            alert(`Clicked on day ${i}`);
+        });
+
+        calenderContent.appendChild(dayElement);
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const calendarContent = document.getElementById("calender-content");
+    const currentMonthElement = document.getElementById("current-month");
+
+    function renderCalendar(year, month) {
+        // Clear existing content
+        calendarContent.innerHTML = "";
+
+        // Update the current month displayed
+        currentMonthElement.textContent = getMonthName(month) + " " + year;
+
+        // Get the number of days in the month
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Get the day of the week for the first day of the month
+        const firstDayOfWeek = new Date(year, month, 1).getDay();
+
+        // Create date boxes for each day
+        for (let i = 0; i < firstDayOfWeek; i++) {
+            const emptyBox = document.createElement("div");
+            emptyBox.className = "calendar__item empty";
+            calendarContent.appendChild(emptyBox);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dateBox = document.createElement("div");
+            dateBox.className = "calendar__item";
+            dateBox.textContent = day;
+            dateBox.onclick = () => selectDate(year, month, day);
+            calendarContent.appendChild(dateBox);
+        }
+    }
+
+    function getMonthName(month) {
+        const monthNames = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ];
+        return monthNames[month];
+    }
+
+    function selectDate(year, month, day) {
+        alert(`Selected date: ${getMonthName(month)} ${day}, ${year}`);
+        // You can customize this function to handle the selected date as needed
+    }
+
+    function changeMonth(step) {
+        // Change the month based on the step (1 for next month, -1 for previous month)
+        // For simplicity, this example assumes a static year (2024)
+        const currentMonth = new Date().getMonth();
+        const newMonth = currentMonth + step;
+
+        renderCalendar(2024, newMonth);
+    }
+
+    // Initial render for the current month
+    const initialYear = new Date().getFullYear();
+    const initialMonth = new Date().getMonth();
+    renderCalendar(initialYear, initialMonth);
+});
+
+
+    </script>
+</body>
+
+</html>

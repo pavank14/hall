@@ -1,0 +1,190 @@
+Certainly! Below is another example of HTML, CSS, and JavaScript code for a simple banquet hall website with a different design. This example includes a basic image slider in the "Home" section and a form for "Contact Us."
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Banquet Hall</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .slider {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .slider img.active {
+      display: block;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Banquet Hall</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#booking">Booking</a>
+    <a href="#facility">Facility</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section id="home" class="slider">
+    <img src="1.jpeg" alt="Banquet Hall Image 1" class="active">
+    <img src="2.jpeg" alt="Banquet Hall Image 2">
+    <img src="3.jpeg" alt="Banquet Hall Image 3">
+  </section>
+
+  <section id="booking">
+    <h2>Booking</h2>
+    <p>Book our banquet hall for your upcoming events.</p>
+  </section>
+
+  <section id="facility">
+    <h2>Facility</h2>
+    <p>Explore the amenities and facilities we offer.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Learn more about our banquet hall and our team.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Banquet Hall. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider img');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000);
+
+    function submitForm() {
+      // You can add your form submission logic here
+      alert('Form submitted successfully!');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+
+</body>
+</html>
+```
+
+In this example, the "Home" section features a simple image slider with automatic sliding. The "Contact Us" section includes a form with a more modern design. Customize the images and further style the website according to your preferences and requirements.
