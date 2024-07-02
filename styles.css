@@ -9,17 +9,25 @@ body {
 
 /*..........logo...............*/
 /* Logo styling */
-.logo {
+.logo1 {
     position: absolute;
-    top: 10px; /* Adjust the top position as needed */
+    top: 8px; /* Adjust the top position as needed */
     left: 10px; /* Adjust the left position as needed */
 }
-
-.logo img {
-    width: 100px; /* Adjust the width as needed */
+.logo {
+    position: absolute;
+    top: 8px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+}
+.logo1 img {
+    width: 80px; /* Adjust the width as needed */
     height: 160%; /* Maintain aspect ratio */
 }
 
+.logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: 160%; /* Maintain aspect ratio */
+}
 
 header {
    
@@ -47,6 +55,18 @@ nav a {
 }
 
 /* ... Your existing CSS code ... */
+#photo-container {
+    max-width: 1600px;
+    margin-top: -10px;
+    height: 425px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+            width: 100%;
+            height: 425px;
+        }
 
 .image {
     
@@ -55,18 +75,25 @@ nav a {
     text-align: center;
 }
 
+
+.calendar{
+    color: #fff;
+    margin: 10px auto;
+    background: #04b6e2;
+    padding: 60px 40px 80px 40px;
+    width: 95%;
+    max-width: 600px;
+    height: 325px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(2,2,2,0.2);
+    position: relative;
+  }
 /* ... Your existing CSS code ... */
 
 .image {
     margin-top: 10px;
     text-align: center;
     
-}
-
-.image img {
-    width: 1520px;
-    height: 600px;
-    flex-shrink: 0;
 }
 
 
@@ -308,135 +335,15 @@ footer {
 .social-media i {
     font-size: 40px;
 }
+
+
 /*..........css for booking ...........*/
 
 
 
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 10px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-   background-color:#094f74;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Additional CSS for background styling */
-.background-image {
-    /* Replace 'your-image.jpg' with the path to your background image */
-    background-image: url('18.png');
-    background-size: 100%; /* Adjust as needed */
-    background-position: center center;
-    background-attachment: fixed; /* Ensures the background remains fixed while scrolling */
-    background-repeat: no-repeat;
-    color: #fff; /* Adjust text color for better visibility */
-}
-
-/* Rest of your existing CSS code */
-
-
-.booking-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-form {
-    display: flex;
-    max-width: 800px;
-    width: 100%;
-}
-
-.credentials,
-.booking-options {
-    flex: 1;
-    padding: 20px;
-    border-right: 2px solid #ddd;
-}
-/* Additional styling for improved aesthetics */
-
-.credentials label,
-.booking-options h3,
-.booking-options label {
-    font-weight: bold;
-    color: #333;
-    
-}
-
-.credentials,
-.booking-options {
-    padding: 20px;
-    margin-top: 10px;
-    background-color: #a4ceea;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    max-width: 500px;
-    margin: 180px;
-    margin-top: 10px;
-    
-   
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-    width:23px;
-}
 
 /* Add responsive styling if needed */
-
-@media (max-width: 600px) {
-    form {
-        flex-direction: column;
-    }
-
-    .credentials,
-    .booking-options {
-        border: none;
-        padding: 20px;
-    }
-}
-
-.booking-options {
-    padding-left: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    width:300px;
-}
-
-
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 12px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #555;
-}
 
 /*.............marrage...................*/
 
@@ -469,6 +376,19 @@ button:hover {
     margin-top: 10px;
     color: #555;
 }
+ /* Customize the style as needed */
+ #photo-container {
+    max-width: 1600px;
+    margin-top: -10px;
+    height: 570px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+        .carousel-inner img {
+            width: 100%;
+            height: 570px;
+        }
 /*......................contact form...............*/
 
 
@@ -858,7 +778,8 @@ button {
 button:hover {
     background-color: #555;
 }
-/*.............. booking facitiy........*/body {
+/*.............. booking facitiy........*/
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -901,9 +822,7 @@ header {
     flex: 1;
 }
 
-.circle1, .circle2, .circle3 {
- 
-}
+
 /* Your existing CSS styles */
 
 .completed {
@@ -976,16 +895,17 @@ header {
     margin-top: 20px;
     padding: 10px;
     margin-top: 10px;
-    padding: 20px;
+    padding: 15px;
     background-color: #a4ceea;
-    border-radius: 10px;
+    border-radius: -26px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    max-width: 500px;
-    margin: 180px;
-    margin-top: 10px;
-    
+    width: 716px;
+    margin-left: 313px;
+    margin-top: 219px;
 }
+    
+
 
 #cart-total button,
 #summaryContainer button {
@@ -1127,4 +1047,178 @@ button {
     #calender-content .calendar__item:hover {
         background-color: #e0e0e0; /* Change background color on hover */
     }
-    
+    /*.......faility........*/
+   
+/* Your existing styles go here */
+
+/* Facility section styles */z
+.facility-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.facility-item {
+    width: 150px;
+    background-color: #158924;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+/* Facility section styles */
+.facility-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.facility-item {
+    width: 300px;
+    background-color: #158924;
+    color: #fff;
+    padding: z;
+    cursor: pointer;
+    height: 270px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.facility-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Popup styles (similar to the previous example) */
+.facility-item {
+    position: relative;
+    width: 300px;
+    height: 270px;
+    background-color: #ffffff;
+    color: #30d82d;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-box {
+    height: 70%;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+    font-size:25px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.details {
+    font-size: 0.9rem;
+}
+
+
+#facilityPopup h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#facilityPopup p {
+    color: #555;
+}
+
+#facilityPopup span {
+    color: #6352d4;
+    font-weight: bold;
+}
+.popup {
+    /* ... existing styles ... */
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.popup img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 60px;
+}
+
+.popup h2, .popup p {
+    margin: 0;
+    padding-left: 10px; /* Adjust this value for left spacing */
+}
+.popup {
+    /* ... existing styles ... */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width if necessary */
+}
+
+.popup-content {
+    display: flex;
+}
+
+.popup img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.text-content {
+    padding: 70px;
+}
+
+.text-content p#decorationExperience {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.gallery-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF; /* Different color for the gallery button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    background-color: #0056b3; /* Hover color for the gallery button */
+}
+/* Your existing CSS styles go here */
+/* ................payment.......... */

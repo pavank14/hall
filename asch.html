@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Box</title>
+    <style>
+        #centerBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+
+        #centerBox.enlarged {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        #shadeButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="centerBox"></div>
+    <button id="toggleButton" onclick="toggleBox()">Toggle Box</button>
+    <button id="shadeButton" onclick="changeShade()">Change Shade</button>
+    <button id="animateButton" onclick="animateBox()">Animate</button>
+
+    <script>
+        var currentShadeIndex = 0;
+        var shades = ["blue", "green", "orange", "purple", "pink"];
+
+        function toggleBox() {
+            var centerBox = document.getElementById("centerBox");
+            centerBox.classList.toggle("enlarged");
+        }
+
+        function changeShade() {
+            var centerBox = document.getElementById("centerBox");
+            currentShadeIndex = (currentShadeIndex + 1) % shades.length;
+            centerBox.style.backgroundColor = shades[currentShadeIndex];
+        }
+
+        function animateBox() {
+            var centerBox = document.getElementById("centerBox");
+            centerBox.style.transition = "transform 0.999999s ease-in-out";
+            centerBox.style.transform = "rotate(360deg)";
+            setTimeout(function () {
+                centerBox.style.transition = "width 0.3s, height 0.3s, background-color 0.3s, transform 0s";
+                centerBox.style.transform = "rotate(0deg)";
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
